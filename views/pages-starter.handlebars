@@ -1,27 +1,26 @@
-@@include("partials/main.html")
+
+{{> top}}
 
     <head>
-        
-        @@include("partials/title-meta.html", {"title": "Starter Page"})
+        {{> title-meta title="Starter Page"}}
 
-        @@include("partials/head-css.html")
+        {{> head-css}}
 
     </head>
-
-    @@include("partials/body.html")
+    {{> body}}
 
         <div class="layout-wrapper d-lg-flex">
 
             <!-- Start left sidebar-menu -->
-            @@include("partials/sidebar-menu.html")
+            {{> sidebar-menu}}
             <!-- end left sidebar-menu -->
             
         </div>
         <!-- end  layout wrapper -->
 
-        @@include("partials/vendor-scripts.html")
+        {{> vendor-scripts}}
 
-        <script src="assets/js/app.js"></script>
+        <script src="./assets/js/app.js"></script>
 
     </body>
 </html>

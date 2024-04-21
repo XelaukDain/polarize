@@ -1,23 +1,21 @@
-@@include("partials/main.html")
+{{> top}}
 
     <head>
-        
-        @@include("partials/title-meta.html", {"title": "Register"})
+        {{> title-meta title="Register"}}
 
-        @@include("partials/head-css.html")
+        {{> head-css}}
 
     </head>
-
-    @@include("partials/body.html")
+    {{> body}}
 
         <div class="account-pages my-5 pt-sm-5">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-6 col-xl-5">
                         <div class="text-center mb-4">
-                            <a href="index.html" class="auth-logo mb-5 d-block">
-                                <img src="assets/images/logo-dark.png" alt="" height="30" class="logo logo-dark">
-                                <img src="assets/images/logo-light.png" alt="" height="30" class="logo logo-light">
+                            <a href="/" class="auth-logo mb-5 d-block">
+                                <img src="./assets/images/logo-dark.png" alt="" height="30" class="logo logo-dark">
+                                <img src="./assets/images/logo-light.png" alt="" height="30" class="logo logo-light">
                             </a>
 
                             <h4>Sign up</h4>
@@ -28,7 +26,7 @@
                         <div class="card">
                             <div class="card-body p-4">
                                 <div class="p-3">
-                                    <form action="index.html">
+                                    <form action="/">
 
                                         <div class="mb-3">
                                             <label class="form-label">Email</label>
@@ -78,7 +76,7 @@
                         </div>
 
                         <div class="mt-5 text-center">
-                            <p>Already have an account ? <a href="auth-login.html" class="fw-medium text-primary"> Signin </a> </p>
+                            <p>Already have an account ? <a href="/auth-login" class="fw-medium text-primary"> Signin </a> </p>
                             <p>© <script>document.write(new Date().getFullYear())</script> Chatvia. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
                         </div>
                     </div>
@@ -87,11 +85,9 @@
         </div>
         <!-- end account-pages -->
 
+        {{> vendor-scripts}}
 
-
-        @@include("partials/vendor-scripts.html")
-
-        <script src="assets/js/app.js"></script>
+        <script src="./assets/js/app.js"></script>
 
     </body>
 </html>
